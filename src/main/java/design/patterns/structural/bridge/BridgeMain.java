@@ -2,23 +2,23 @@ package design.patterns.structural.bridge;
 
 public class BridgeMain {
     public static void main(String[] args) {
-        DrawingDevice printer = new WhiteBoard();
+        DrawingDevice whiteBoard = new WhiteBoard();
         DrawingDevice screen = new Screen();
 
-        Shape rectangleOnPrinter = new Rectangle(printer);
-        rectangleOnPrinter.draw();
+        Shape rectangleOnWhiteBoard = new Rectangle(whiteBoard);
+        rectangleOnWhiteBoard.draw();
 
         Shape rectangleOnScreen = new Rectangle(screen);
         rectangleOnScreen.draw();
 
-        Shape circleOnPrinter = new Circle(printer);
-        circleOnPrinter.draw();
+        Shape circleOnWhiteBoard = new Circle(whiteBoard);
+        circleOnWhiteBoard.draw();
 
         Shape circleOnScreen = new Circle(screen);
         circleOnScreen.draw();
 
-        Shape squareOnPrinter = new Square(printer);
-        squareOnPrinter.draw();
+        Shape squareOnWhiteBoard = new Square(whiteBoard);
+        squareOnWhiteBoard.draw();
 
         Shape squareOnScreen = new Square(screen);
         squareOnScreen.draw();

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Servers {
-    private static Servers INSTANCE = new Servers();
+    private static Servers INSTANCE;
 
     private List<String> servers;
 
@@ -13,9 +13,9 @@ public class Servers {
     }
 
     public static Servers getInstance(){
-//        if(INSTANCE == null){
-//            INSTANCE = new Servers();
-//        }
+        if(INSTANCE == null){
+            INSTANCE = new Servers();
+        }
         return INSTANCE;
     }
 
@@ -40,10 +40,6 @@ public class Servers {
     }
 
     private List<String> getServers(String startsWith){
-//        return this.servers
-//                .stream()
-//                .filter(s -> s.startsWith(startsWith + ":"))
-//                .collect(Collectors.toList());
         List<String> newServerList = new ArrayList<>();
         for(String server: this.servers){
             if(server.startsWith(startsWith + ":")){

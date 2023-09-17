@@ -1,5 +1,7 @@
 package design.patterns.creational.abstractFactory;
 
+import design.patterns.structural.composite.Toy;
+
 public class AbstractToyFactory {
     ToyFactory plasticToyFactory = new PlasticToyFactory();
     ToyFactory woodenToyFactory = new WoodenToyFactory();

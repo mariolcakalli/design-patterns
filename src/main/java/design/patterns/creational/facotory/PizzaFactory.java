@@ -1,8 +1,10 @@
 package design.patterns.creational.facotory;// Let's start by creating an interface for our pizza.
 
 // Now, let's create a pizza factory class.
-class PizzaFactory {
-    public Pizza createPizza(String type) {
+public class PizzaFactory {
+    private PizzaFactory(){}
+
+    public static Pizza createPizza(String type) {
         Pizza pizza = null;
 
         if (type.equals("cheese")) {

@@ -9,7 +9,7 @@ public class Dog {
     private List<String> toys = new ArrayList<>();
 
     public static class DogBuilder {
-        private Dog dog = new Dog();
+        private final Dog dog = new Dog();
         public DogBuilder withName(String name){
             this.dog.setName(name);
             return this;
